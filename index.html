@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vega Consulting offers premier HR solutions, executive search, and talent acquisition services in India and globally. Connect with top talent today.">
+    <meta name="keywords" content="HR consulting, recruitment agency, executive search, talent acquisition, staffing solutions, Gurugram, India">
+    <meta name="author" content="Vega Consulting">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vegaconsulting.in/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vegaconsulting.in/">
+    <meta property="og:title" content="Vega Consulting | HR & Recruitment Solutions">
+    <meta property="og:description" content="Premier HR solutions firm dedicated to helping organizations build stellar teams through expert recruitment and staffing services.">
+    <meta property="og:image" content="https://vegaconsulting.in/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vegaconsulting.in/">
+    <meta property="twitter:title" content="Vega Consulting | HR & Recruitment Solutions">
+    <meta property="twitter:description" content="Premier HR solutions firm dedicated to helping organizations build stellar teams through expert recruitment and staffing services.">
+    <meta property="twitter:image" content="https://vegaconsulting.in/assets/og-image.jpg">
+
+    <title>Vega Consulting | HR & Recruitment Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS Variables & Reset --- */
+        :root {
+            --primary-color: #0f172a; /* Deep Navy */
+            --accent-color: #c29b40; /* Muted Gold */
+            --text-dark: #334155;
+            --text-light: #f8fafc;
+            --bg-light: #f1f5f9;
+            --white: #ffffff;
+            --always-white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* --- Accessibility: Skip Link --- */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 2001;
+            transition: top 0.3s;
+            border-radius: 0 0 4px 4px;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* --- Dark Mode Overrides --- */
+        body.dark-mode {
+            --text-dark: #cbd5e1;
+            --bg-light: #1e293b;
+            --white: #0f172a;
+            --accent-color: #eab308;
+        }
+
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
+            color: #f1f5f9;
+        }
+
+        body.dark-mode header.scrolled .logo,
+        body.dark-mode header.scrolled .nav-links a {
+            color: #f1f5f9;
+        }
+
+        body.dark-mode .service-card, body.dark-mode .team-card, body.dark-mode .blog-card, body.dark-mode .faq-item {
+            border-color: #334155;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: transparent;
+            box-shadow: none;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--always-white);
+            letter-spacing: -0.5px;
+            transition: color 0.3s ease;
+        }
+
+        header.scrolled .logo {
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            color: var(--always-white);
+        }
+
+        header.scrolled .nav-links a {
+            color: var(--text-dark);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: transparent;
+            color: var(--always-white);
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 1px solid var(--always-white);
+        }
+
+        header.scrolled .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--always-white);
+            color: var(--primary-color);
+            border-color: var(--always-white);
+        }
+
+        header.scrolled .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* --- Theme Toggle Button --- */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--always-white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: var(--transition);
+        }
+
+        header.scrolled .theme-toggle {
+            color: var(--text-dark);
+        }
+
+        /* --- Search Bar --- */
+        .search-form {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 5px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            margin-right: 10px;
+        }
+
+        .search-form input {
+            background: transparent;
+            border: none;
+            color: var(--always-white);
+            outline: none;
+            width: 120px;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .search-form input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-form button {
+            background: none;
+            border: none;
+            color: var(--always-white);
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0;
+            display: flex;
+        }
+
+        header.scrolled .search-form {
+            background: #f1f5f9;
+            border-color: #e2e8f0;
+        }
+
+        header.scrolled .search-form input,
+        header.scrolled .search-form button {
+            color: var(--text-dark);
+        }
+
+        header.scrolled .search-form input::placeholder {
+            color: #94a3b8;
+        }
+
+        body.dark-mode header.scrolled .search-form {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode header.scrolled .search-form input,
+        body.dark-mode header.scrolled .search-form button {
+            color: var(--always-white);
+        }
+
+        /* --- Hamburger Menu --- */
+        button.hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--always-white);
+        }
+
+        header.scrolled .bar {
+            background-color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--always-white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--always-white);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* --- Services Section --- */
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header .divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: var(--accent-color);
+        }
+
+        .icon-box {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        /* --- Jobs Section --- */
+        .job-tag {
+            background: #e2e8f0;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .job-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 15px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* --- About Section --- */
+        .about {
+            background-color: var(--bg-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #64748b;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* --- Stats Section --- */
+        .stats-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* --- Team Section --- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .team-image {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #e2e8f0;
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-info h3 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .team-info span {
+            display: block;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-info p {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* --- Contact Section --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .map-container {
+            margin-top: 50px;
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* --- Testimonials Section --- */
+        .testimonial-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .testimonial-slide {
+            display: none;
+            animation: fade 1.5s;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        .quote-text {
+            font-size: 1.25rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .author-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .author-info span {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .slider-dots {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        button.dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #cbd5e1;
+            border: none;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            padding: 0;
+        }
+
+        .dot.active, .dot:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* --- FAQ Section --- */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.active {
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        button.faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: inherit;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+            line-height: 1;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 20px 20px 20px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* --- Blog Section --- */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border: 1px solid #e2e8f0;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .blog-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* --- Clients Carousel --- */
+        .clients-section {
+            padding: 60px 0;
+            background-color: var(--white);
+            overflow: hidden;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .clients-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .clients-header h3 {
+            color: #94a3b8;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo-slider {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .logo-track {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            animation: scroll 30s linear infinite;
+            width: max-content;
+            padding: 20px 0;
+        }
+
+        .client-logo {
+            height: 35px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+            filter: grayscale(100%);
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* --- Back to Top Button --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #94a3b8;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* --- Newsletter Form --- */
+        .newsletter-form {
+            margin-top: 15px;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
+            color: var(--white);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-family: inherit;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #94a3b8;
+        }
+
+        .newsletter-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* --- Social Media Links --- */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255,255,255,0.1);
+            color: var(--white);
+            border-radius: 50%;
+            transition: var(--transition);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .social-link:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* --- Cookie Consent Banner --- */
+        .cookie-banner {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            color: var(--text-dark);
+            padding: 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            transition: bottom 0.5s ease;
+            border-top: 1px solid var(--accent-color);
+        }
+
+        .cookie-banner.show {
+            bottom: 0;
+        }
+
+        .cookie-banner .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--always-white);
+        }
+
+        .cookie-banner .btn-primary:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--always-white);
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                gap: 0;
+                flex-direction: column;
+                background-color: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                padding: 20px 0;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links a {
+                color: var(--text-dark);
+                margin: 16px 0;
+                font-size: 1.2rem;
+            }
+
+            /* Hide header button on mobile to save space */
+            nav .btn-primary {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content, .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .cookie-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .search-form {
+                margin: 10px auto;
+                width: 80%;
+                border-color: #cbd5e1;
+            }
+            .search-form input {
+                color: var(--text-dark);
+                width: 100%;
+            }
+            .search-form button {
+                color: var(--text-dark);
+            }
+        }
+    </style>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Vega Consulting",
+      "image": "https://vegaconsulting.in/assets/logo.png",
+      "@id": "https://vegaconsulting.in",
+      "url": "https://vegaconsulting.in",
+      "telephone": "+919876543210",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Business Park, Cyber City",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "postalCode": "122002",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.498659,
+        "longitude": 77.085600
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://facebook.com",
+        "https://twitter.com",
+        "https://linkedin.com"
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Vega<span>Consulting</span></a>
+                <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#team">Team</a>
+                    <a href="#services">Services</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#contact">Contact</a>
+                    <form class="search-form">
+                        <input type="text" placeholder="Search..." aria-label="Search">
+                        <button type="submit">🔍</button>
+                    </form>
+                    <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+                </div>
+                <a href="#contact" class="btn-primary">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Connecting Talent with Opportunity</h1>
+            <p>Vega Consulting is a premier HR solutions firm dedicated to helping organizations build stellar teams through expert recruitment and staffing services.</p>
+            <a href="#services" class="btn-primary" style="background-color: var(--accent-color); border-color: var(--accent-color);">Our Expertise</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Expertise</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box" role="img" aria-label="Search Icon">🔍</div>
+                    <h3>Executive Search</h3>
+                    <p>We specialize in identifying and placing senior leadership talent that aligns with your organizational vision and culture.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box" role="img" aria-label="Handshake Icon">🤝</div>
+                    <h3>Talent Acquisition</h3>
+                    <p>Comprehensive recruitment strategies to find the right candidates for your technical and non-technical roles efficiently.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box" role="img" aria-label="Lightbulb Icon">💡</div>
+                    <h3>HR Consulting</h3>
+                    <p>Expert advisory services on compensation, benefits, and organizational development to optimize your workforce.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Openings Section -->
+    <section id="careers" class="section-padding" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current Openings</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" style="text-align: left;">
+                    <span class="job-tag">Engineering</span>
+                    <h3>Senior Backend Developer</h3>
+                    <p>We are looking for an experienced Python developer to lead our backend infrastructure team.</p>
+                    <div class="job-meta">
+                        <span>📍 Remote</span>
+                        <a href="#contact" style="color: var(--accent-color); font-weight: 600;">Apply Now &rarr;</a>
+                    </div>
+                </div>
+                <div class="service-card" style="text-align: left;">
+                    <span class="job-tag">Human Resources</span>
+                    <h3>HR Manager</h3>
+                    <p>Oversee recruitment processes and employee relations in our fast-growing Gurugram office.</p>
+                    <div class="job-meta">
+                        <span>📍 Gurugram</span>
+                        <a href="#contact" style="color: var(--accent-color); font-weight: 600;">Apply Now &rarr;</a>
+                    </div>
+                </div>
+                <div class="service-card" style="text-align: left;">
+                    <span class="job-tag">Marketing</span>
+                    <h3>Digital Marketing Specialist</h3>
+                    <p>Drive our digital presence through SEO, SEM, and social media campaigns.</p>
+                    <div class="job-meta">
+                        <span>📍 Mumbai</span>
+                        <a href="#contact" style="color: var(--accent-color); font-weight: 600;">Apply Now &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" alt="Meeting Room" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2>Why Choose Vega?</h2>
+                    <p>At Vega Consulting, we believe that true value comes from the people who drive your business. We have helped numerous companies across India and the globe find the right talent to redefine their success metrics.</p>
+                    <p>Our team consists of industry veterans and HR specialists dedicated to one goal: connecting you with the best talent in the market.</p>
+                    <a href="#contact" style="color: var(--accent-color); font-weight: 600;">Learn more about our team &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="200" data-suffix="+">0+</div>
+                    <div class="stat-label">Clients Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1500" data-suffix="+">0+</div>
+                    <div class="stat-label">Candidates Placed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="15" data-suffix="+">0+</div>
+                    <div class="stat-label">Industries Covered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="95" data-suffix="%">0%</div>
+                    <div class="stat-label">Retention Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="container">
+            <div class="clients-header">
+                <h3>Trusted by Industry Leaders</h3>
+            </div>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <!-- Set 1 -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="client-logo" alt="Google" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" class="client-logo" alt="IBM" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="client-logo" alt="Microsoft" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="client-logo" alt="Amazon" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="client-logo" alt="Netflix" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" class="client-logo" alt="Meta" loading="lazy">
+                    <!-- Set 2 (Duplicate for seamless loop) -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="client-logo" alt="Google" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" class="client-logo" alt="IBM" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="client-logo" alt="Microsoft" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="client-logo" alt="Amazon" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="client-logo" alt="Netflix" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" class="client-logo" alt="Meta" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Leaders</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="CEO" class="team-image" loading="lazy">
+                    <div class="team-info">
+                        <h3>Vikram Malhotra</h3>
+                        <span>Founder & CEO</span>
+                        <p>With over 20 years in HR consulting, Vikram leads the strategic vision of Vega, focusing on executive search and organizational transformation.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Director" class="team-image" loading="lazy">
+                    <div class="team-info">
+                        <h3>Anjali Sharma</h3>
+                        <span>Director of Operations</span>
+                        <p>Anjali ensures seamless delivery of our recruitment services, specializing in process optimization and client relationship management.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Head of Tech" class="team-image" loading="lazy">
+                    <div class="team-info">
+                        <h3>Rohan Gupta</h3>
+                        <span>Head of Tech Recruitment</span>
+                        <p>A former software engineer turned recruiter, Rohan bridges the gap between technical requirements and talent acquisition.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="HR Consultant" class="team-image" loading="lazy">
+                    <div class="team-info">
+                        <h3>Priya Desai</h3>
+                        <span>Senior HR Consultant</span>
+                        <p>Priya specializes in compensation benchmarking and employee engagement strategies for startups and mid-sized enterprises.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Success Stories</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="testimonial-slider">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide active">
+                    <p class="quote-text">"Vega Consulting transformed our hiring process. Their understanding of the tech landscape helped us fill critical leadership roles in record time."</p>
+                    <div class="author-info">
+                        <h4>Rajesh Kumar</h4>
+                        <span>CTO, FinTech Innovations</span>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <p class="quote-text">"The team at Vega is professional, insightful, and incredibly well-connected. They didn't just send resumes; they sent future leaders."</p>
+                    <div class="author-info">
+                        <h4>Sarah Jenkins</h4>
+                        <span>HR Director, Global Solutions Inc.</span>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="testimonial-slide">
+                    <p class="quote-text">"As a candidate, I appreciated the transparency and guidance provided by Vega. They matched me with a role that perfectly fits my career goals."</p>
+                    <div class="author-info">
+                        <h4>Amit Verma</h4>
+                        <span>Senior Product Manager</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-dots">
+                <button class="dot active" onclick="currentSlide(1)" aria-label="Go to slide 1"></button>
+                <button class="dot" onclick="currentSlide(2)" aria-label="Go to slide 2"></button>
+                <button class="dot" onclick="currentSlide(3)" aria-label="Go to slide 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What industries do you specialize in?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We specialize in Technology, FinTech, Healthcare, and E-commerce sectors. However, our HR consulting services are industry-agnostic and can be tailored to any business model.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How long does the executive search process take?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Typically, a retained executive search takes between 6 to 12 weeks, depending on the complexity of the role and specific requirements. We ensure a thorough vetting process to find the perfect match.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Do you offer remote staffing solutions?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we have a vast network of remote-ready professionals and can assist in setting up the necessary infrastructure and policies for remote teams.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What is your fee structure?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our fees vary based on the service provided. For recruitment, it is typically a percentage of the candidate's first-year CTC. For consulting projects, we offer both fixed-fee and retainer models.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Insights</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Teamwork" class="blog-image" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Oct 12, 2023</span>
+                            <span>•</span>
+                            <span>Recruitment</span>
+                        </div>
+                        <h3>The Future of Remote Work in 2024</h3>
+                        <p>Explore how hybrid models are reshaping organizational culture and what leaders need to know to adapt.</p>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Technology" class="blog-image" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Sep 28, 2023</span>
+                            <span>•</span>
+                            <span>Technology</span>
+                        </div>
+                        <h3>AI in HR: Beyond the Hype</h3>
+                        <p>How artificial intelligence is streamlining the recruitment process without losing the human touch.</p>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Leadership" class="blog-image" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Sep 15, 2023</span>
+                            <span>•</span>
+                            <span>Leadership</span>
+                        </div>
+                        <h3>Retaining Top Talent in Competitive Markets</h3>
+                        <p>Key strategies for keeping your best performers engaged and motivated in a high-demand landscape.</p>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p style="margin-bottom: 30px;">Ready to transform your business? Reach out to us for a preliminary consultation.</p>
+                    
+                    <div class="info-item">
+                        <strong>📍</strong>
+                        <span>123 Business Park, Cyber City<br>Gurugram, India 122002</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>📧</strong>
+                        <span>contact@vegaconsulting.in</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>📞</strong>
+                        <span>+91 98765 43210</span>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" aria-label="Subject">
+                    <textarea name="message" placeholder="How can we help you?" aria-label="Message" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.119100662636!2d77.08560031507966!3d28.49865898247076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d193863943355%3A0x6548598d72651339!2sDLF%20Cyber%20City%2C%20DLF%20Phase%202%2C%20Sector%2024%2C%20Gurugram%2C%20Haryana%20122002%2C%20India!5e0!3m2!1sen!2sus!4v1625638492834!5m2!1sen!2sus" allowfullscreen="" loading="lazy" title="Google Map"></iframe>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Vega Consulting</h4>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Empowering businesses with exceptional human capital solutions.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">FB</a>
+                        <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">TW</a>
+                        <a href="https://linkedin.com" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LI</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px;">Subscribe to our newsletter for the latest industry insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" aria-label="Email Address for Newsletter" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Vega Consulting. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to Top">&uarr;</a>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner">
+        <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.</p>
+        <button id="accept-cookies" class="btn-primary">Accept</button>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handler (AJAX to Formspree)
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    alert('Thank you for contacting Vega Consulting. We will get back to you shortly.');
+                    form.reset();
+                } else {
+                    alert('Oops! There was a problem submitting your form.');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your form.');
+            }
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Back to Top Button Logic
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Hamburger Menu Logic
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+            hamburger.setAttribute("aria-expanded", hamburger.classList.contains("active"));
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+
+        // Testimonial Slider Logic
+        let slideIndex = 1;
+        let slideInterval;
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("testimonial-slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            slides[slideIndex-1].classList.add("active");
+            dots[slideIndex-1].className += " active";
+        }
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            showSlides(slideIndex = n);
+            startAutoSlide();
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(() => {
+                showSlides(slideIndex += 1);
+            }, 5000);
+        }
+
+        // Initialize Slider
+        startAutoSlide();
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                    const answer = item.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+        // Stats Counter Animation
+        const statsSection = document.querySelector('.stats-section');
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let animated = false;
+
+        const startCount = (el) => {
+            const target = +el.getAttribute('data-target');
+            const suffix = el.getAttribute('data-suffix');
+            const duration = 2000; // Animation duration in ms
+            const increment = target / (duration / 16); // 60 FPS approx
+            
+            let current = 0;
+            const update = () => {
+                current += increment;
+                if (current < target) {
+                    el.innerText = Math.ceil(current) + suffix;
+                    requestAnimationFrame(update);
+                } else {
+                    el.innerText = target + suffix;
+                }
+            };
+            update();
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animated) {
+                    statNumbers.forEach(stat => startCount(stat));
+                    animated = true;
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Newsletter Form Handler
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+
+        // Dark Mode Toggle Logic
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+
+        // Check local storage
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            themeToggle.textContent = isDark ? '☀️' : '🌙';
+        });
+
+        // Cookie Consent Logic
+        const cookieBanner = document.querySelector('.cookie-banner');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(() => cookieBanner.classList.add('show'), 1000);
+        }
+
+        acceptCookiesBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'true');
+            cookieBanner.classList.remove('show');
+        });
+
+        // Search Form Handler (Prevent default for demo)
+        document.querySelector('.search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = this.querySelector('input').value;
+            if(query) alert('Searching for: ' + query);
+        });
+    </script>
+</body>
+</html>
