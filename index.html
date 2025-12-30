@@ -967,6 +967,27 @@
             color: var(--always-white);
         }
 
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-dark);
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 1px solid var(--text-dark);
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
         /* --- Mobile Responsive --- */
         @media (max-width: 768px) {
             .hamburger {
@@ -1543,8 +1564,11 @@
 
     <!-- Cookie Consent Banner -->
     <div class="cookie-banner">
-        <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.</p>
-        <button id="accept-cookies" class="btn-primary">Accept</button>
+        <p>We use cookies to personalize content and ads, and to analyze our traffic. By clicking "Accept", you consent to our use of cookies.</p>
+        <div class="cookie-buttons">
+            <button id="decline-cookies" class="btn-secondary">Decline</button>
+            <button id="accept-cookies" class="btn-primary">Accept</button>
+        </div>
     </div>
 
     <script>
@@ -1754,13 +1778,34 @@
         // Cookie Consent Logic
         const cookieBanner = document.querySelector('.cookie-banner');
         const acceptCookiesBtn = document.getElementById('accept-cookies');
+        const declineCookiesBtn = document.getElementById('decline-cookies');
 
-        if (!localStorage.getItem('cookieConsent')) {
+        // Function to load Google Ads dynamically
+        function loadGoogleAds() {
+            const script = document.createElement('script');
+            // REPLACE ca-pub-XXXXXXXXXXXXXXXX WITH YOUR ACTUAL PUBLISHER ID
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6679653411579957"; 
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            document.head.appendChild(script);
+        }
+
+        const userConsent = localStorage.getItem('cookieConsent');
+
+        if (userConsent === 'true') {
+            loadGoogleAds();
+        } else if (userConsent !== 'false') {
             setTimeout(() => cookieBanner.classList.add('show'), 1000);
         }
 
         acceptCookiesBtn.addEventListener('click', () => {
             localStorage.setItem('cookieConsent', 'true');
+            cookieBanner.classList.remove('show');
+            loadGoogleAds();
+        });
+
+        declineCookiesBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'false');
             cookieBanner.classList.remove('show');
         });
 
